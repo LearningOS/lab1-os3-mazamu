@@ -38,6 +38,7 @@ fn clear_bss() {
 
 #[no_mangle]
 pub fn rust_main() -> ! {
+    //
     clear_bss();
     logging::init();
     println!("[kernel] Hello, world!");
