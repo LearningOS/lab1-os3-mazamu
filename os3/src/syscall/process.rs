@@ -22,8 +22,7 @@ pub fn sys_exit(exit_code: i32) -> ! {
     panic!("Unreachable in sys_exit!");
 }
 
-/// get time with second and microsecond
-pub fn sys_get_time(ts: *mut TimeVal, _tz: usize) -> isize {
+pub fn sys_get_time(ts: *mut TimeVal, _tz: usize) -> isize{
     let us = get_time_us();
     unsafe {
         *ts = TimeVal {
